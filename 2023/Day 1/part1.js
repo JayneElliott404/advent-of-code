@@ -3,12 +3,12 @@ const array = fs.readFileSync('data.txt').toString().split("\n")
 
 let result = 0
 
-for (let i of array) {
+for (const i of array) {
     const lineArray = i.split("")
 
     const numbers = []
 
-    for (let j of lineArray) {
+    for (const j of lineArray) {
         const isNumber = !isNaN(j)
         if (isNumber === true) {
             numbers.push(j)
